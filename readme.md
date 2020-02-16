@@ -3,36 +3,36 @@
 This repo documents the process for setting up a development environment using the Windows Subsystem for Linux.
 
 1. Install WSL
-- As instructed [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
-    - From the start menu search `powershell`, right-click and select `run as administrator`
-    - Enter the command `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
-    - Restart when prompted
+    - As instructed [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
+        - From the start menu search `powershell`, right-click and select `run as administrator`
+        - Enter the command `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+        - Restart when prompted
 
 2. Install Ubuntu version
-- Open Microsoft Store
-- Search "Ubuntu"
-- Select and install latest version (currently [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q))
+    - Open Microsoft Store
+    - Search "Ubuntu"
+    - Select and install latest version (currently [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q))
 
 3. Open Ubuntu from Start Menu
-- Wait for install to complete
-- Enter Ubuntu username and password when prompted
+    - Wait for install to complete
+    - Enter Ubuntu username and password when prompted
 
 4. Optional - Set Alias Commands
-- Alias commands are useful to save time if similar commands are run frequently
-- In Ubuntu shell, run the command `nano ~/.bashrc` (to use nano text editor, can be any)
-- At end of file, add: `alias windows='cd /mnt/c/Users/user.name/desired/folder/path` 
-- (Where `user.name` is your Windows username, and `desired/folder/path` is the location that you wish to setup an alias for)
-- Save the changes made to `.bashrc` file
-- Run the command `source ~/.bashrc` 
-- Now to navigate to `/mnt/c/Users/user.name/desired/folder/path` use the command `windows`
+    - Alias commands are useful to save time if similar commands are run frequently
+    - In Ubuntu shell, run the command `nano ~/.bashrc` (to use nano text editor, can be any)
+    - At end of file, add: `alias windows='cd /mnt/c/Users/user.name/desired/folder/path` 
+    - (Where `user.name` is your Windows username, and `desired/folder/path` is the location that you wish to setup an alias for)
+    - Save the changes made to `.bashrc` file
+    - Run the command `source ~/.bashrc` 
+    - Now to navigate to `/mnt/c/Users/user.name/desired/folder/path` use the command `windows`
 
 5. Setup GitHub SSH Keys
-- Follow the GitHub [instructions](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new SSH key in Ubuntu shell
-    - Once step 4 is complete (SSH key is generated, stored in the default location and using a secure passphrase), view the public key using `cat .ssh/id_rsa.pub`
-- Copy the public SSH key to clipboard
-- Save it as a new key on GitHub (instructions [here](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) if needed)
+    - Follow the GitHub [instructions](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new SSH key in Ubuntu shell
+        - Once step 4 is complete (SSH key is generated, stored in the default location and using a secure passphrase), view the public key using `cat .ssh/id_rsa.pub`
+    - Copy the public SSH key to clipboard
+    - Save it as a new key on GitHub (instructions [here](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) if needed)
 
 6. Fix Permissions
-- Need to allow WSL permissions to change and edit files located within `/mnt/`
-- Follow instructions [here](https://askubuntu.com/questions/911804/ubuntu-for-windows-10-all-files-are-own-by-root-and-i-cannot-change-it)
-    - Use command `sudo nano /etc/wsl.conf` to open and edit the file
+    - Need to allow WSL permissions to change and edit files located within `/mnt/`
+    - Follow instructions [here](https://askubuntu.com/questions/911804/ubuntu-for-windows-10-all-files-are-own-by-root-and-i-cannot-change-it)
+        - Use command `sudo nano /etc/wsl.conf` to open and edit the file
