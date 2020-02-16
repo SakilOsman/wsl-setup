@@ -39,10 +39,16 @@ This repo documents the process for setting up a development environment using t
     - Follow instructions [here](https://askubuntu.com/questions/911804/ubuntu-for-windows-10-all-files-are-own-by-root-and-i-cannot-change-it)
         - Use command `sudo nano /etc/wsl.conf` to open and edit the file
 
-8. Install VS Code extension
+8. Install NVM
+    - Install Node Version Manager (NVM) from [here](https://github.com/nvm-sh/nvm#installing-and-updating)
+    - Use NVM to install desired version of Node.js: `nvm install vXX.XX.X` (current LTS version is 12.16.0)
+    - Set the Node version to use: `nvm use 12.16.0` (for example)
+    - Set the default: `nvm alias default 12.16.0` (for example)
+
+9. Install VS Code extension
     - Install `ms-vscode-remote.remote-wsl` extension in VS Code
 
-9. Ready to work
+10. Ready to work
     - Work flow for developing is as follows:
         - Power up Windows machine
         - Open Ubuntu subsystem 
