@@ -30,7 +30,7 @@ This repo documents the process for setting up a development environment using t
 
 6. Setup GitHub SSH Keys
     - Follow the GitHub [instructions](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a new SSH key in Ubuntu shell
-        - Once step 4 is complete (SSH key is generated, stored in the default location and using a secure passphrase), view the public key using `cat .ssh/id_rsa.pub`
+        - Once complete (SSH key is generated, stored in the default location and using a secure passphrase), view the public key using `cat .ssh/id_rsa.pub`
     - Copy the public SSH key to clipboard
     - Save it as a new key on GitHub (instructions [here](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) if needed)
 
